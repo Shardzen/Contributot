@@ -1,0 +1,9 @@
+# Les propriétaires par défaut sont automatiquement demandés en review sur une PR.
+
+# Infra / config (docker, CI)
+/docker-compose.yml   @Shardzen
+/.github/              @Shardzen
+
+# Documentation / process d'équipe
+/CONTRIBUTING.md       @LOIS_GITHUB_USERNAME
+*.md                   @LOIS_GITHUB_USERNAME

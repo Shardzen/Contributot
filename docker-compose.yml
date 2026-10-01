@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  app:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=production
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=contributot
+      - POSTGRES_USER=contributot
+      - POSTGRES_PASSWORD=changeme
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  db_data:
